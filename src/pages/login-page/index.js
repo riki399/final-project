@@ -2,6 +2,7 @@ import { Button, TextField } from '@mui/material';
 import './style.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 
 
 export default function LoginPage() {
@@ -23,6 +24,7 @@ export default function LoginPage() {
             <Button variant="contained" color="success" onClick={submit}>
                  Войти
             </Button>
+            <Link to="/register">Зарегистрироваться</Link>
         </form>
     )
 }

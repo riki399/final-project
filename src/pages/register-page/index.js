@@ -1,16 +1,19 @@
 import { Button, TextField } from '@mui/material';
 import './style.css';
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 
 
 export default function RegisterPage() {
-    const [password, setPassword] = useState(null)
-    const [login, setLogin] = useState(null)
-    const [repeatPassword, setRepeatPassword] = useState(null)
+    const [password, setPassword] = useState('')
+    const [login, setLogin] = useState('')
+    const [repeatPassword, setRepeatPassword] = useState('')
+    const navigate = useNavigate()
 
     const submit = () => {
         sessionStorage.setItem('userLogin', login)
         sessionStorage.setItem('userPassword', password)
+       navigate('/login'); 
     }
     return (
         <form className="registration-form">
