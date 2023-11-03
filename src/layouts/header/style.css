@@ -1,0 +1,11 @@
+.link-container {
+       padding: 20px 40px;
+}
+
+.header-container {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
